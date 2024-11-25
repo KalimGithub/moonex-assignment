@@ -4,7 +4,7 @@ import close from "../../assets/close.svg";
 import moonex from "../../assets/moonex.svg";
 import uniswap from "../../assets/uniswap.svg";
 import Comparison from "../../assets/Comparison.svg";
-import ellipse from "../../assets/ellipse.svg";
+import Ellipse from "../../assets/Ellipse.svg";
 
 const Table = () => {
   return (
@@ -27,7 +27,7 @@ const Table = () => {
         </thead>
         <tbody
           style={{
-            backgroundImage: `url(${ellipse})`,
+            backgroundImage: `url(${Ellipse})`,
             backgroundSize: "cover",
             backgroundPosition: "start",
             backgroundRepeat: "no-repeat",
