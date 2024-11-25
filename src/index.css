@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.golden-btn,
+.outlined-golden-btn {
+  background-color: rgba(228, 180, 13, 1);
+  padding: 10px 30px;
+  border-radius: 100px;
+  font-weight: 600;
+  text-align: center;
+  min-width: 150px;
+  border: 2px solid rgba(228, 180, 13, 1);
+}
+.outlined-golden-btn {
+  background-color: transparent;
+  border: 2px solid rgba(228, 180, 13, 1);
+  color: rgba(228, 180, 13, 1);
+}
+.golden-text {
+  color: rgba(228, 180, 13, 1);
+}
+.hero-heading {
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-family: "Comic Neue", cursive;
+}
+
+.about-heading,
+.features-heading {
+  font-family: "Comic Neue", cursive;
+  font-weight: 600;
+  font-size: xx-large;
+  font-style: normal;
+}
+.table th {
+  margin: auto;
+  font-family: "Comic Neue", cursive;
+  padding: 14px 32px;
+  text-align: left;
+  border-right: 1px solid rgb(36, 55, 74);
+  border-bottom: 1px solid rgb(44, 75, 105);
+}
+.top-row img {
+  margin: auto;
+  width: 10rem;
+}
+
+tbody tr th img {
+  margin: auto;
+}
+
+.no-border-th {
+  border-right: none !important;
+}
