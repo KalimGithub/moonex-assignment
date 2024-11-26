@@ -3,6 +3,7 @@ import Drawer from "@mui/material/Drawer";
 import Button from "./Button";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-scroll";
+
 export default function Drawerplacement({ isOpen, setIsOpen }) {
   const toggleDrawer = () => (event) => {
     if (
@@ -27,37 +28,50 @@ export default function Drawerplacement({ isOpen, setIsOpen }) {
         </div>
         <div className="flex flex-col bg-gray-900 h-screen items-center justify-start gap-10 px-24 pb-24">
           <Link
-            to="hero"
+            to="header"
             smooth={true}
             duration={500}
             className="text-xl font-bold text-white hover:text-gray-200"
+            onClick={() => setIsOpen(!isOpen)}
           >
             Home
           </Link>
-          <a
-            className="text-xl font-bold text-white hover:text-gray-200 "
-            href="#hero"
+          <Link
+            to="about-us"
+            smooth={true}
+            duration={500}
+            className="text-xl font-bold text-white hover:text-gray-200"
+            onClick={() => setIsOpen(!isOpen)}
           >
             About Us
-          </a>
-          <a
+          </Link>
+          <Link
+            to="features"
+            smooth={true}
+            duration={500}
             className="text-xl font-bold text-white hover:text-gray-200 "
-            href=""
+            onClick={() => setIsOpen(!isOpen)}
           >
             Roadmap
-          </a>
-          <a
+          </Link>
+          <Link
+            to="faqs"
+            smooth={true}
+            duration={500}
             className="text-xl font-bold text-white hover:text-gray-200 "
-            href=""
+            onClick={() => setIsOpen(!isOpen)}
           >
             FAQs
-          </a>
-          <a
+          </Link>
+          <Link
+            to="contact-us"
+            smooth={true}
+            duration={500}
             className="text-xl font-bold text-white hover:text-gray-200 "
-            href=""
+            onClick={() => setIsOpen(!isOpen)}
           >
             Contact Us
-          </a>
+          </Link>
           <Button text={"Connect Wallet"} />
         </div>
       </Drawer>

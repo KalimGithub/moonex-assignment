@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useRef } from "react";
 import check from "../../assets/check.svg";
 import close from "../../assets/close.svg";
 import moonex from "../../assets/moonex.svg";
 import uniswap from "../../assets/uniswap.svg";
 import Comparison from "../../assets/Comparison.svg";
 import Ellipse from "../../assets/Ellipse.svg";
+import { motion, useInView } from "framer-motion";
 
 const Table = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
-    <div className="flex items-center justify-center">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, x: -40 }} // Start hidden and moved down
+      animate={isInView ? { opacity: 1, x: 0 } : {}} // Animate when in view
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="flex items-center justify-center px-8 sm:px-12 "
+    >
       <table className="table rounded-lg text-slate-400 text-lg font-extralight bg-slate-800 my-8">
         <thead>
           <tr className="top-row">
@@ -32,7 +41,6 @@ const Table = () => {
             backgroundPosition: "start",
             backgroundRepeat: "no-repeat",
             backdropFilter: "revert",
-            opacity: "30%",
           }}
         >
           <tr>
@@ -99,7 +107,7 @@ const Table = () => {
           </tr>
         </tbody>
       </table>
-    </div>
+    </motion.div>
   );
 };
 

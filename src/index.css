@@ -20,6 +20,16 @@
   border: 2px solid rgba(228, 180, 13, 1);
   color: rgba(228, 180, 13, 1);
 }
+.golden-btn:hover {
+  background-color: rgba(7, 22, 36, 1);
+  color: rgba(228, 180, 13, 1);
+  box-shadow: 1px 1px 10px rgb(90, 87, 87);
+}
+.outlined-golden-btn:hover {
+  background-color: rgba(228, 180, 13, 1);
+  color: rgba(7, 22, 36, 1);
+  box-shadow: 1px 1px 10px rgb(90, 87, 87);
+}
 .golden-text {
   color: rgba(228, 180, 13, 1);
 }
@@ -31,7 +41,8 @@
 }
 
 .about-heading,
-.features-heading {
+.features-heading,
+.faq-heading {
   font-family: "Comic Neue", cursive;
   font-weight: 600;
   font-size: xx-large;
@@ -56,4 +67,13 @@ tbody tr th img {
 
 .no-border-th {
   border-right: none !important;
+}
+
+@media screen and (max-width: 600px) {
+  .table th {
+    padding: 6px 16px;
+  }
+  .top-row img {
+    width: 5rem;
+  }
 }

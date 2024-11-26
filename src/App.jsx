@@ -20,8 +20,8 @@ function App() {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           width: "100%",
-          padding: "3rem",
         }}
+        className="sm:p-4 md:p-[3rem]"
       >
         <Header />
         <HeroSection />

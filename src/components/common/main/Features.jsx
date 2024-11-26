@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useRef } from "react";
 import FeaturesCard from "../FeaturesCard";
 import Dollar from "../../../assets/Dollar.svg";
 import Phone_Off from "../../../assets/Phone_Off.svg";
 import Shield_Check from "../../../assets/Shield_Check.svg";
 import Options_3 from "../../../assets/Options_3.svg";
+import { motion, useInView } from "framer-motion";
+
 const Features = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
-    <div>
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 40 }} // Start hidden and moved down
+      animate={isInView ? { opacity: 1, y: 0 } : {}} // Animate when in view
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="features"
+    >
       <h1 className="features-heading text-white text-6xl mt-8 text-center">
         Our <span className="golden-text">Features</span>
       </h1>
-      <div className="grid grid-cols-4 grid-rows-5 gap-4 w-[80%] my-16 items-center justify-center m-auto">
+      <div className="grid auto-cols-auto md:grid-cols-2 lg:grid-cols-4 gap-4 w-[80%] my-16 items-center justify-center m-auto">
         <FeaturesCard
           logo={Dollar}
           title={"Cheapest TXs"}
@@ -38,7 +48,7 @@ const Features = () => {
           }
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

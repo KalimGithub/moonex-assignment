@@ -9,7 +9,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className="flex justify-between items-center px-10">
+      <div className="header flex justify-between items-center px-10">
         <img src={logo} />
         {/* center part of header */}
         <div className="hidden lg:flex  items-center justify-between w-[50%]">
@@ -17,39 +17,39 @@ const Header = () => {
             to="hero"
             smooth={true}
             duration={500}
-            className="text-xl font-bold text-white hover:text-gray-200 active   "
+            className="text-xl cursor-pointer font-bold text-white hover:text-gray-300"
           >
             Home
           </Link>
           <Link
-            to="hero"
+            to="about-us"
             smooth={true}
             duration={500}
-            className="text-xl font-bold text-white hover:text-gray-200 "
+            className="text-xl cursor-pointer font-bold text-white hover:text-gray-300 "
           >
             About Us
           </Link>
           <Link
-            to="hero"
+            to="features"
             smooth={true}
             duration={500}
-            className="text-xl font-bold text-white hover:text-gray-200 "
+            className="text-xl cursor-pointer font-bold text-white hover:text-gray-300 "
           >
             Roadmap
           </Link>
           <Link
-            to="hero"
+            to="faqs"
             smooth={true}
             duration={500}
-            className="text-xl font-bold text-white hover:text-gray-200 "
+            className="text-xl cursor-pointer font-bold text-white hover:text-gray-300 "
           >
             FAQs
           </Link>
           <Link
-            to="hero"
+            to="contact-us"
             smooth={true}
             duration={500}
-            className="text-xl font-bold text-white hover:text-gray-200 "
+            className="text-xl cursor-pointer font-bold text-white hover:text-gray-300 "
           >
             Contact Us
           </Link>
